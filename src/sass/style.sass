@@ -1,0 +1,320 @@
+@import mixin
+@import variables
+@import nullstyle
+@import icomoon
+@import _tab
+@import _slick
+
+body
+  font-family: 'Open Sans', sans-serif
+  font-size: 15px
+
+.container
+  +container(100%, 1140px, 0 auto)
+  padding: 0 18px
+img
+  display: block
+  max-width: 100%
+header
+  .top
+    background: #f0f3f8
+    padding: 10px 0
+
+.top-line
+  display: flex
+  justify-content: flex-end
+  align-items: center
+  .arrow
+    &:after 
+      content: "\2039"
+      color: #999
+      display: inline-block
+      font-size: 20px
+      transform: rotate(-90deg)
+  li
+    margin: 0 10px
+  img
+    display: inline-block
+
+
+.center
+  padding: 20px 0
+  .container
+    +flexCenter
+  .logo
+    @media (max-width: 768px)
+      max-width: 50%
+
+.call-back
+  @media (max-width: 768px)
+    font-size: 12px
+    text-align: right
+  li
+    padding-bottom: 5px
+  a
+    display: block
+    color: $menuColor
+    &:hover
+      color: $accentColor
+  .call-order
+    text-decoration: underline
+    font-weight: 300
+
+.bottom
+  padding: 20px 0
+  background: #f9fafc
+  @media (max-width: 1000px)
+    overflow-y: auto
+.navigation
+  +flexCenter  
+  li
+    width: 100%
+    text-align: center
+  .active
+    position: relative
+    &:before
+      position: absolute
+      content: " "
+      width: 100%
+      height: 3px
+      top: -20px
+      right: 0
+      display: block
+      background: $accentColor        
+    .icon
+      color: $accentColor
+      transition: .2s color
+  span
+    display: block
+  .icon
+    font-size: 45px
+    color: #000
+    padding-bottom: 20px
+    transition: .2s color
+    @media (max-width: 768px)
+      font-size: 35px
+      margin: 0px 20px
+    &:hover
+      color: $accentColor
+      transition: .2s color
+  .name
+    color: $menuColor
+    padding: 0 10px
+    white-space: nowrap
+    @media (max-width: 768px)
+      font-size: 14px
+      
+
+#main
+  margin-top: 30px
+  @media (max-width: 1000px)
+    margin-top: 10px
+
+.breadcrumbs
+  display: flex
+  @media (max-width: 1000px)
+    overflow-y: auto
+    padding-bottom: 15px
+  a
+    white-space: nowrap
+    color: #999
+    transition: .2s color
+    @media (max-width: 1000px)
+      font-size: 12px
+    &:hover
+      color: $accentColor
+      transition: .2s color
+  li
+    &:after
+      content: "\2192"
+      color: $menuColor
+      padding: 0 10px
+    &:last-child
+      a
+        color: $menuColor
+    &:last-child:after
+      display: none
+
+.content
+  margin-top: 55px
+  .container
+    display: flex
+    justify-content: space-between
+.product
+  padding-right: 40px
+  width: calc(100% - 250px)
+  @media (max-width: 1000px)
+    width: 100%
+    padding: 0
+  h1
+    font-size: 30px
+    line-height: 1.3
+    margin-bottom: 20px
+    @media (max-width: 768px)
+      font-size: 23px
+  h2
+    font-size: 14px
+    color: #999999
+    margin-bottom: 40px
+  
+.product-box
+  max-width: 660px
+.price-box
+  display: flex
+  justify-content: space-between
+  font-size: 40px
+  font-weight: 300
+  color: $accentColor
+  margin-bottom: 25px
+  @media (max-width: 480px)
+    font-size: 30px
+  a
+    display: block
+    font-size: 16px
+    color: #fff
+  sup
+    font-size: 18px
+
+.slide
+  a
+    display: block
+    padding: 20px 0 0
+    font-size: 14px
+    transition: .2s color
+    &:hover
+      color: $accentColor
+      transition: .2s color 
+.gallery
+  margin-bottom: 220px
+  display: flex
+  .slider-for
+    width: calc(100% - 100px)
+  .slider-nav
+    width: 100px
+    background: #f5f8fa
+    text-align: center
+    padding: 10px
+    img
+      cursor: pointer
+      margin: 0 auto
+      padding: 5px 0
+      max-width: 50px
+
+  .slick-arrow
+    border: solid #6a6b6b
+    border-width: 0 1px 1px 0
+    display: inline-block
+    padding: 5px
+    background: transparent
+  .slick-prev
+    transform: rotate(-135deg)
+  .slick-next
+    transform: rotate(45deg)
+
+
+.tabs-holder
+  width: 100%
+.tabset
+  +flexCenter
+  @media (max-width: 1000px)
+    overflow-y: auto
+  li
+    text-align: center
+    width: 100% 
+  a
+    border-bottom: 1px solid #cccccc
+    position: relative
+    display: block
+    padding: 10px 0px
+    margin: 0px 15px
+    width: 100%
+    color: #000
+    font-size: 18px
+    font-weight: 300
+    transition: .2s color 
+    &:hover
+      color: #ff8d87
+      &:before
+        display: block
+        position: absolute
+        content: ""
+        height: 1px
+        width: 100%
+        background: #ff8d87
+        bottom: -1px
+        transition: .2s color 
+    &.active
+      color: $accentColor
+      &:before
+        display: block
+        position: absolute
+        content: ""
+        height: 1px
+        width: 100%
+        background: $accentColor
+        bottom: -1px
+.tab-content
+  padding: 40px 5px
+  font-size: 16px
+  line-height: 1.5
+  p
+    padding-bottom: 10px
+
+
+.sidebar
+  width: 260px
+  @media (max-width: 1000px)
+    display: none
+.button
+  max-width: 210px
+  display: block
+  color: #2b2b2b
+  font-size: 16px
+  border: 1px solid #000
+  border-radius: 10px
+  padding: 15px 30px
+  transition: .3s background
+  margin-bottom: 30px
+  &:hover
+    border: 1px solid #fff
+    color: #fff
+    background: $accentColor
+    transition: .4s background 
+  &.red
+    border: 1px solid #ee3346
+    background: #ee3346
+    padding: 15px 60px 15px 13px
+    position: relative
+    &:hover
+      background: #ff696a
+      color: #000
+    &:before
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      right: 30px
+      height: 100%
+      border-right: 1px solid #d1192c
+      border-left: 1px solid #f15767
+    &:after
+      content: '‹'
+      display: block
+      position: absolute
+      top: 0
+      right: 0
+      height: 100%
+      transform: rotate(-90deg)
+.main-nav
+  display: block 
+  font-size: 18px
+  cursor: pointer
+  a
+    color: #000
+    .arrow
+      margin-left: 5px
+      display: inline-block
+      transform: rotate(-90deg)
+  li.active .arrow
+        margin-left: 10px
+        transform: rotate(90deg)
